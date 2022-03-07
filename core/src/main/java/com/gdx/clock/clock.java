@@ -1,0 +1,61 @@
+package com.gdx.clock;
+
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
+import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
+import com.badlogic.gdx.utils.ScreenUtils;
+
+/** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
+public class clock extends ApplicationAdapter {
+
+	DateTimeFormatter secondsFormat;
+	DateTimeFormatter minutesFormat;
+	DateTimeFormatter hoursFormat;
+	ShapeRenderer sr;
+	int clockCenterX;
+	int clockCenterY;
+	
+	@Override
+	public void create() {
+		secondsFormat = DateTimeFormatter.ofPattern("ss");
+		minutesFormat = DateTimeFormatter.ofPattern("mm");
+		hoursFormat = DateTimeFormatter.ofPattern("hh");
+		
+		sr = new ShapeRenderer();
+		clockCenterX = Gdx.graphics.getWidth()/2;
+		clockCenterY = Gdx.graphics.getHeight()/2 - 20;
+	}
+
+	@Override
+	public void render() {
+		LocalTime localTime = LocalTime.now();
+		int seconds = Integer.parseInt(secondsFormat.format(localTime));
+		float percentSeconds = seconds/60f;
+		System.out.println(percentSeconds);
+		float secondsAngle = percentSeconds * 360;
+		secondsAngle = (float) (secondsAngle * Math.PI / 180);
+		
+		
+		float x = (float) (clockCenterX + 180 * Math.cos(secondsAngle));
+		float y = (float) (clockCenterY + 180 * Math.sin(secondsAngle));
+		
+		ScreenUtils.clear(Color.WHITE);
+		
+		sr.begin(ShapeType.Line);
+		sr.setColor(Color.BLACK);
+		sr.circle(clockCenterX, clockCenterY, 200);
+		sr.rectLine(clockCenterX, clockCenterY, x, y, 20);
+		sr.end();
+		
+	}
+
+	@Override
+	public void dispose() {
+
+	}
+}
