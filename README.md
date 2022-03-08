@@ -6,7 +6,7 @@
 
 ![Alt Text](https://github.com/LeoTovell/Clock/blob/main/info/clockWithSwitch.gif)
 
---
+---
 ## Previous Updates:
 
 ### Clock with Ticks
