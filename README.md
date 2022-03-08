@@ -1,5 +1,3 @@
-# most advanced clock you will ever C
-
 ## No anti-aliasing
 ![Alt Text](https://github.com/LeoTovell/Clock/blob/main/info/clockAA0.gif)
 
