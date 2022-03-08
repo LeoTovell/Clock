@@ -1,7 +1,12 @@
 ## Latest upgrade
-![Alt Text](https://github.com/LeoTovell/Clock/blob/main/info/clockWithTicks.gif)
 
+![Alt Text](https://github.com/LeoTovell/Clock/blob/main/info/clockWithSwitch.gif)
 ---
+
+## Clock with ticks on edge
+
+![Alt Text](https://github.com/LeoTovell/Clock/blob/main/info/clockWithTicks.gif)
+--
 
 ## No anti-aliasing
 ![Alt Text](https://github.com/LeoTovell/Clock/blob/main/info/clockAA0.gif)
