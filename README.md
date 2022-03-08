@@ -13,7 +13,7 @@
 ![Alt Text](https://github.com/LeoTovell/Clock/blob/main/info/clockWithTicks.gif)
 
 ### Anti-aliasing
-#### no sampling
+#### No sampling
 ![Alt Text](https://github.com/LeoTovell/Clock/blob/main/info/clockAA0.gif)
 
 #### 1 Sample
