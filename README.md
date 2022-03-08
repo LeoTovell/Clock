@@ -1,3 +1,3 @@
 # Screenshot incoming
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://github.com/LeoTovell/Clock/blob/main/clock.gif)
